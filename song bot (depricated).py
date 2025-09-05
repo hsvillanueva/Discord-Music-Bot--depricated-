@@ -89,11 +89,4 @@ async def stop(ctx):
         ctx.voice_client.stop()
         await ctx.send('Stopped playing.')
 
-# Get token from environment variable for security
-token = os.getenv('DISCORD_BOT_TOKEN')
-if not token:
-    print("Error: DISCORD_BOT_TOKEN environment variable not set!")
-    print("Please set your bot token as an environment variable.")
-    exit(1)
-
-bot.run(token)
+bot.run('bot token')
